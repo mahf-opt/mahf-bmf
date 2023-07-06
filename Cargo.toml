@@ -1,0 +1,18 @@
+[package]
+name = "mahf-bmf"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jonathan Wurth <jonathan.wurth@uni-a.de>"]
+description = "A collection of common continuous benchmark functions."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/mahf-opt/mahf-bmf"
+keywords = ["heuristic", "metaheuristic", "optimization", "benchmark"]
+categories = ["science", "algorithms"]
+
+[dependencies]
+mahf = { git = "https://github.com/mahf-opt/mahf" }
+better_any = "0.2.0"
+eyre = "0.6.8"
+serde = "1.0.163"
+proptest = "1.2.0"

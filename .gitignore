@@ -1,0 +1,35 @@
+## Rust
+/target/
+Cargo.lock
+
+## Intellij Idea
+.idea/
+
+## Visual Studio Code
+.vscode/
+
+## Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.lnk
+
+## R
+.Rhistory
+
+## Python
+/evaluation/eval/__pycache__
+/evaluation/eval/.pytest_cache
+.pyc
+
+## Jupyter
+.ipynb_checkpoints
