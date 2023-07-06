@@ -8,7 +8,7 @@
 //!
 //! \[2\] [Virtual Library of Simulation Experiments](https://www.sfu.ca/~ssurjano/optimization.html)
 //!
-//! \[3\] Momin Jamil and Xin-She Yang. 2013. A Literature Survey of Benchmark Functions For Global Optimization Problems. IJMMNO 4, 2 (2013), 150. DOI:https://doi.org/10/gh48qq
+//! \[3\] Momin Jamil and Xin-She Yang. 2013. A Literature Survey of Benchmark Functions For Global Optimization Problems. IJMMNO 4, 2 (2013), 150. DOI:<https://doi.org/10/gh48qq>
 
 use std::f64::consts::PI;
 
