@@ -1,5 +1,11 @@
 # MAHF BMF
 
+![Crates.io](https://img.shields.io/crates/v/mahf-bmf)
+![docs.rs](https://img.shields.io/docsrs/mahf-bmf?logo=docsdotrs)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mahf-opt/mahf-bmf/ci.yml?logo=github)
+![GitHub](https://img.shields.io/github/license/mahf-opt/mahf-bmf)
+
+
 A collection of common continuous benchmark functions for [MAHF](https://github.com/mahf-opt/mahf).
 
 All functions are scaled to a domain of [-1, 1] for each dimension.
