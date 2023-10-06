@@ -28,10 +28,10 @@ pub mod implementations;
 pub mod tests;
 pub mod utils;
 
-/// Wraps a benchmark function as [`mahf::Problem`].
-#[derive(Clone, Copy, serde::Serialize)]
+/// Wraps a benchmark function as [`Problem`].
+#[derive(Clone, serde::Serialize)]
 pub struct BenchmarkFunction {
-    name: &'static str,
+    name: String,
     dimension: usize,
     #[serde(skip)]
     domain: [f64; 2],
@@ -65,7 +65,7 @@ impl Problem for BenchmarkFunction {
     type Objective = SingleObjective;
 
     fn name(&self) -> &str {
-        self.name
+        &self.name
     }
 }
 

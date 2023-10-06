@@ -31,7 +31,7 @@ impl BenchmarkFunction {
     /// ```
     pub fn sphere(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "sphere",
+            name: format!("{}<{}>", "sphere", dimension),
             implementation: scaled_implementations::sphere,
             dimension,
             domain: [-5.12, 5.12],
@@ -55,7 +55,7 @@ impl BenchmarkFunction {
     /// ```
     pub fn rastrigin(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "rastrigin",
+            name: format!("{}<{}>", "rastrigin", dimension),
             implementation: scaled_implementations::rastrigin,
             dimension,
             domain: [-5.12, 5.12],
@@ -79,7 +79,7 @@ impl BenchmarkFunction {
     /// ```
     pub fn ackley(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "ackley",
+            name: format!("{}<{}>", "ackley", dimension),
             implementation: scaled_implementations::ackley,
             dimension,
             domain: [-32.0, 32.0],
@@ -103,7 +103,7 @@ impl BenchmarkFunction {
     /// ```
     pub fn ackley_n4(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "ackleyN4",
+            name: format!("{}<{}>", "ackleyN4", dimension),
             implementation: scaled_implementations::ackley_n4,
             dimension,
             domain: [-35.0, 35.0],
@@ -127,7 +127,7 @@ impl BenchmarkFunction {
     /// ```
     pub fn alpine_n1(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "alpineN1",
+            name: format!("{}<{}>", "alpineN1", dimension),
             implementation: scaled_implementations::alpine_n1,
             dimension,
             domain: [-10.0, 10.0],
@@ -151,7 +151,7 @@ impl BenchmarkFunction {
     /// ```
     pub fn alpine_n2(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "alpineN2",
+            name: format!("{}<{}>", "alpineN2", dimension),
             implementation: scaled_implementations::alpine_n2,
             dimension,
             domain: [0.0, 10.0],
@@ -162,7 +162,7 @@ impl BenchmarkFunction {
     /// The [Brown](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/brownfcn.html) function.
     pub fn brown(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "brown",
+            name: format!("{}<{}>", "brown", dimension),
             implementation: scaled_implementations::brown,
             dimension,
             domain: [-1.0, 4.0],
@@ -173,7 +173,7 @@ impl BenchmarkFunction {
     /// The [Exponential](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/exponentialfcn.html) function.
     pub fn exponential(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "exponential",
+            name: format!("{}<{}>", "exponential", dimension),
             implementation: scaled_implementations::exponential,
             dimension,
             domain: [-1.0, 1.0],
@@ -184,7 +184,7 @@ impl BenchmarkFunction {
     /// The [Griewank](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/griewankfcn.html) function.
     pub fn griewank(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "griewank",
+            name: format!("{}<{}>", "griewank", dimension),
             implementation: scaled_implementations::griewank,
             dimension,
             domain: [-600.0, 600.0],
@@ -195,7 +195,7 @@ impl BenchmarkFunction {
     /// The [Happy Cat](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/happycatfcn.html) function.
     pub fn happy_cat(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "happyCat",
+            name: format!("{}<{}>", "happyCat", dimension),
             implementation: scaled_implementations::happy_cat,
             dimension,
             domain: [-2.0, 2.0],
@@ -206,7 +206,7 @@ impl BenchmarkFunction {
     /// The [Periodic](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/periodicfcn.html) function.
     pub fn periodic(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "periodic",
+            name: format!("{}<{}>", "periodic", dimension),
             implementation: scaled_implementations::periodic,
             dimension,
             domain: [-10.0, 10.0],
@@ -217,7 +217,7 @@ impl BenchmarkFunction {
     /// The [Powell Sum](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/powellsumfcn.html) function.
     pub fn powell_sum(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "powellSum",
+            name: format!("{}<{}>", "powellSum", dimension),
             implementation: scaled_implementations::powell_sum,
             dimension,
             domain: [-1.0, 1.0],
@@ -228,7 +228,7 @@ impl BenchmarkFunction {
     /// The [Qing](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/qingfcn.html) function.
     pub fn qing(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "qing",
+            name: format!("{}<{}>", "qing", dimension),
             implementation: scaled_implementations::qing,
             dimension,
             domain: [-500.0, 500.0],
@@ -239,7 +239,7 @@ impl BenchmarkFunction {
     /// The [Ridge](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/ridgefcn.html) function.
     pub fn ridge(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "ridge",
+            name: format!("{}<{}>", "ridge", dimension),
             implementation: scaled_implementations::ridge,
             dimension,
             domain: [-5.0, 5.0],
@@ -250,7 +250,7 @@ impl BenchmarkFunction {
     /// The [Rosenbrock](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/rosenbrockfcn.html) function.
     pub fn rosenbrock(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "rosenbrock",
+            name: format!("{}<{}>", "rosenbrock", dimension),
             implementation: scaled_implementations::rosenbrock,
             dimension,
             domain: [-5.0, 10.0],
@@ -261,7 +261,7 @@ impl BenchmarkFunction {
     /// The [Salomon](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/salomonfcn.html) function.
     pub fn salomon(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "salomon",
+            name: format!("{}<{}>", "salomon", dimension),
             implementation: scaled_implementations::salomon,
             dimension,
             domain: [-100.0, 100.0],
@@ -272,7 +272,7 @@ impl BenchmarkFunction {
     /// The [Schwefel 2.20](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/schwefel220fcn.html) function.
     pub fn schwefel_220(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "schwefel220",
+            name: format!("{}<{}>", "schwefel220", dimension),
             implementation: scaled_implementations::schwefel_220,
             dimension,
             domain: [-100.0, 100.0],
@@ -283,7 +283,7 @@ impl BenchmarkFunction {
     /// The [Schwefel 2.21](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/schwefel221fcn.html) function.
     pub fn schwefel_221(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "schwefel221",
+            name: format!("{}<{}>", "schwefel221", dimension),
             implementation: scaled_implementations::schwefel_221,
             dimension,
             domain: [-100.0, 100.0],
@@ -294,7 +294,7 @@ impl BenchmarkFunction {
     /// The [Schwefel 2.22](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/schwefel222fcn.html) function.
     pub fn schwefel_222(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "schwefel222",
+            name: format!("{}<{}>", "schwefel222", dimension),
             implementation: scaled_implementations::schwefel_222,
             dimension,
             domain: [-100.0, 100.0],
@@ -305,7 +305,7 @@ impl BenchmarkFunction {
     /// The [Schwefel 2.23](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/schwefel223fcn.html) function.
     pub fn schwefel_223(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "schwefel223",
+            name: format!("{}<{}>", "schwefel223", dimension),
             implementation: scaled_implementations::schwefel_223,
             dimension,
             domain: [-10.0, 10.0],
@@ -316,7 +316,7 @@ impl BenchmarkFunction {
     /// The [Schwefel](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/schwefelfcn.html) function.
     pub fn schwefel(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "schwefel",
+            name: format!("{}<{}>", "schwefel", dimension),
             implementation: scaled_implementations::schwefel,
             dimension,
             domain: [-500.0, 500.0],
@@ -327,7 +327,7 @@ impl BenchmarkFunction {
     /// The [Shubert Nr. 3](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/shubert3fcn.html) function.
     pub fn shubert_n3(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "shubertN3",
+            name: format!("{}<{}>", "shubertN3", dimension),
             implementation: scaled_implementations::shubert_n3,
             dimension,
             domain: [-10.0, 10.0],
@@ -338,7 +338,7 @@ impl BenchmarkFunction {
     /// The [Shubert Nr. 4](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/shubert4fcn.html) function.
     pub fn shubert_n4(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "shubertN4",
+            name: format!("{}<{}>", "shubertN4", dimension),
             implementation: scaled_implementations::shubert_n4,
             dimension,
             domain: [-10.0, 10.0],
@@ -349,7 +349,7 @@ impl BenchmarkFunction {
     /// The [Shubert](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/shubertfcn.html) function.
     pub fn shubert(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "shubert",
+            name: format!("{}<{}>", "shubert", dimension),
             implementation: scaled_implementations::shubert,
             dimension,
             domain: [-10.0, 10.0],
@@ -360,18 +360,18 @@ impl BenchmarkFunction {
     /// The [Styblinski-Tang](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/styblinskitankfcn.html) function.
     pub fn styblinski_tang(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "styblinskiTang",
+            name: format!("{}<{}>", "styblinskiTang", dimension),
             implementation: scaled_implementations::styblinski_tang,
             dimension,
             domain: [-5.0, 5.0],
-            known_optimum: -39.1661657037714 * dimension as f64,
+            known_optimum: -39.16616570377142 * dimension as f64,
         }
     }
 
     /// The [Sum Squares](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/sumsquaresfcn.html) function.
     pub fn sum_squares(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "sumSquares",
+            name: format!("{}<{}>", "sumSquares", dimension),
             implementation: scaled_implementations::sum_squares,
             dimension,
             domain: [-10.0, 10.0],
@@ -382,7 +382,7 @@ impl BenchmarkFunction {
     /// The [Xin-She Yang Nr. 2](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/xinsheyangn2fcn.html) function.
     pub fn yang_n2(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "yangN2",
+            name: format!("{}<{}>", "yangN2", dimension),
             implementation: scaled_implementations::yang_n2,
             dimension,
             domain: [-2.0 * PI, 2.0 * PI],
@@ -393,7 +393,7 @@ impl BenchmarkFunction {
     /// The [Xin-She Yang Nr. 3](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/xinsheyangn3fcn.html) function.
     pub fn yang_n3(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "yangN3",
+            name: format!("{}<{}>", "yangN3", dimension),
             implementation: scaled_implementations::yang_n3,
             dimension,
             domain: [-2.0 * PI, 2.0 * PI],
@@ -404,7 +404,7 @@ impl BenchmarkFunction {
     /// The [Xin-She Yang Nr. 4](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/xinsheyangn4fcn.html) function.
     pub fn yang_n4(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "yangN4",
+            name: format!("{}<{}>", "yangN4", dimension),
             implementation: scaled_implementations::yang_n4,
             dimension,
             domain: [-10.0, 10.0],
@@ -415,7 +415,7 @@ impl BenchmarkFunction {
     /// The [Zakharov](https://mazhar-ansari-ardeh.github.io/BenchmarkFcns/benchmarkfcns/zakharov.html) function.
     pub fn zakharov(dimension: usize) -> Self {
         BenchmarkFunction {
-            name: "zakharov",
+            name: format!("{}<{}>", "zakharov", dimension),
             implementation: scaled_implementations::zakharov,
             dimension,
             domain: [-10.0, 10.0],
@@ -427,7 +427,7 @@ impl BenchmarkFunction {
     pub fn ackley_n2(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "ackleyN2",
+            name: "ackleyN2".to_string(),
             implementation: scaled_implementations::ackley_n2,
             dimension,
             domain: [-32.0, 32.0],
@@ -439,11 +439,11 @@ impl BenchmarkFunction {
     pub fn ackley_n3(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "ackleyN3",
+            name: "ackleyN3".to_string(),
             implementation: scaled_implementations::ackley_n3,
             dimension,
             domain: [-32.0, 32.0],
-            known_optimum: -219.1418,
+            known_optimum: -195.629028238419,
         }
     }
 
@@ -451,7 +451,7 @@ impl BenchmarkFunction {
     pub fn adjiman(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "adjiman",
+            name: "adjiman".to_string(),
             implementation: scaled_implementations::adjiman,
             dimension,
             //TODO: find better solution when domains different for x and y
@@ -464,7 +464,7 @@ impl BenchmarkFunction {
     pub fn bartels_conn(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "bartelsConn",
+            name: "bartelsConn".to_string(),
             implementation: scaled_implementations::bartels_conn,
             dimension,
             domain: [-500.0, 500.0],
@@ -476,7 +476,7 @@ impl BenchmarkFunction {
     pub fn beale(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "beale",
+            name: "beale".to_string(),
             implementation: scaled_implementations::beale,
             dimension,
             domain: [-4.5, 4.5],
@@ -488,7 +488,7 @@ impl BenchmarkFunction {
     pub fn bird(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "bird",
+            name: "bird".to_string(),
             implementation: scaled_implementations::bird,
             dimension,
             domain: [-2.0 * PI, 2.0 * PI],
@@ -500,7 +500,7 @@ impl BenchmarkFunction {
     pub fn bohachevsky_n1(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "bohachevskyN1",
+            name: "bohachevskyN1".to_string(),
             implementation: scaled_implementations::bohachevsky_n1,
             dimension,
             domain: [-100.0, 100.0],
@@ -512,7 +512,7 @@ impl BenchmarkFunction {
     pub fn bohachevsky_n2(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "bohachevskyN2",
+            name: "bohachevskyN2".to_string(),
             implementation: scaled_implementations::bohachevsky_n2,
             dimension,
             domain: [-100.0, 100.0],
@@ -524,7 +524,7 @@ impl BenchmarkFunction {
     pub fn booth(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "booth",
+            name: "booth".to_string(),
             implementation: scaled_implementations::booth,
             dimension,
             domain: [-10.0, 10.0],
@@ -536,7 +536,7 @@ impl BenchmarkFunction {
     pub fn brent(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "brent",
+            name: "brent".to_string(),
             implementation: scaled_implementations::brent,
             dimension,
             domain: [-20.0, 0.0],
@@ -548,7 +548,7 @@ impl BenchmarkFunction {
     pub fn bukin_n6(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "bukinN6",
+            name: "bukinN6".to_string(),
             implementation: scaled_implementations::bukin_n6,
             dimension,
             domain: [-15.0, -5.0],
@@ -560,7 +560,7 @@ impl BenchmarkFunction {
     pub fn cross_in_tray(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "crossInTray",
+            name: "crossInTray".to_string(),
             implementation: scaled_implementations::cross_in_tray,
             dimension,
             domain: [-10.0, 10.0],
@@ -572,7 +572,7 @@ impl BenchmarkFunction {
     pub fn deckkers_aarts(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "deckkersAarts",
+            name: "deckkersAarts".to_string(),
             implementation: scaled_implementations::deckkers_aarts,
             dimension,
             domain: [-20.0, 20.0],
@@ -584,7 +584,7 @@ impl BenchmarkFunction {
     pub fn drop_wave(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "dropWave",
+            name: "dropWave".to_string(),
             implementation: scaled_implementations::drop_wave,
             dimension,
             domain: [-5.2, 5.2],
@@ -596,7 +596,7 @@ impl BenchmarkFunction {
     pub fn easom(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "easom",
+            name: "easom".to_string(),
             implementation: scaled_implementations::easom,
             dimension,
             domain: [-100.0, 100.0],
@@ -608,7 +608,7 @@ impl BenchmarkFunction {
     pub fn egg_crate(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "eggCrate",
+            name: "eggCrate".to_string(),
             implementation: scaled_implementations::egg_crate,
             dimension,
             domain: [-5.0, 5.0],
@@ -620,7 +620,7 @@ impl BenchmarkFunction {
     pub fn goldstein_price(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "goldsteinPrice",
+            name: "goldsteinPrice".to_string(),
             implementation: scaled_implementations::goldstein_price,
             dimension,
             domain: [-2.0, 2.0],
@@ -632,7 +632,7 @@ impl BenchmarkFunction {
     pub fn gramacy_lee(dimension: usize) -> Self {
         assert_eq!(dimension, 1);
         BenchmarkFunction {
-            name: "gramacyLee",
+            name: "gramacyLee".to_string(),
             implementation: scaled_implementations::gramacy_lee,
             dimension,
             domain: [0.5, 2.5],
@@ -644,7 +644,7 @@ impl BenchmarkFunction {
     pub fn himmelblau(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "himmelblau",
+            name: "himmelblau".to_string(),
             implementation: scaled_implementations::himmelblau,
             dimension,
             domain: [-6.0, 6.0],
@@ -656,7 +656,7 @@ impl BenchmarkFunction {
     pub fn holder_table(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "holderTable",
+            name: "holderTable".to_string(),
             implementation: scaled_implementations::holder_table,
             dimension,
             domain: [-10.0, 10.0],
@@ -668,7 +668,7 @@ impl BenchmarkFunction {
     pub fn keane(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "keane",
+            name: "keane".to_string(),
             implementation: scaled_implementations::keane,
             dimension,
             domain: [0.0, 10.0],
@@ -680,7 +680,7 @@ impl BenchmarkFunction {
     pub fn leon(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "leon",
+            name: "leon".to_string(),
             implementation: scaled_implementations::leon,
             dimension,
             domain: [0.0, 10.0],
@@ -692,7 +692,7 @@ impl BenchmarkFunction {
     pub fn levi_n13(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "leviN13",
+            name: "leviN13".to_string(),
             implementation: scaled_implementations::levi_n13,
             dimension,
             domain: [-10.0, 10.0],
@@ -704,7 +704,7 @@ impl BenchmarkFunction {
     pub fn matyas(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "matyas",
+            name: "matyas".to_string(),
             implementation: scaled_implementations::matyas,
             dimension,
             domain: [-10.0, 10.0],
@@ -716,11 +716,11 @@ impl BenchmarkFunction {
     pub fn mccormick(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "mccormick",
+            name: "mccormick".to_string(),
             implementation: scaled_implementations::mccormick,
             dimension,
             domain: [-1.5, 4.0],
-            known_optimum: -1.9133,
+            known_optimum: -1.913222954981037,
         }
     }
 
@@ -728,7 +728,7 @@ impl BenchmarkFunction {
     pub fn schaffer_n1(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "schafferN1",
+            name: "schafferN1".to_string(),
             implementation: scaled_implementations::schaffer_n1,
             dimension,
             domain: [-100.0, 100.0],
@@ -740,7 +740,7 @@ impl BenchmarkFunction {
     pub fn schaffer_n2(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "schafferN2",
+            name: "schafferN2".to_string(),
             implementation: scaled_implementations::schaffer_n2,
             dimension,
             domain: [-100.0, 100.0],
@@ -752,7 +752,7 @@ impl BenchmarkFunction {
     pub fn schaffer_n3(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "schafferN3",
+            name: "schafferN3".to_string(),
             implementation: scaled_implementations::schaffer_n3,
             dimension,
             domain: [-100.0, 100.0],
@@ -764,7 +764,7 @@ impl BenchmarkFunction {
     pub fn schaffer_n4(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "schafferN4",
+            name: "schafferN4".to_string(),
             implementation: scaled_implementations::schaffer_n4,
             dimension,
             domain: [-100.0, 100.0],
@@ -776,7 +776,7 @@ impl BenchmarkFunction {
     pub fn three_hump_camel(dimension: usize) -> Self {
         assert_eq!(dimension, 2);
         BenchmarkFunction {
-            name: "threeHumpCamel",
+            name: "threeHumpCamel".to_string(),
             implementation: scaled_implementations::three_hump_camel,
             dimension,
             domain: [-5.0, 5.0],
@@ -788,7 +788,7 @@ impl BenchmarkFunction {
     pub fn wolfe(dimension: usize) -> Self {
         assert_eq!(dimension, 3);
         BenchmarkFunction {
-            name: "wolfe",
+            name: "wolfe".to_string(),
             implementation: scaled_implementations::wolfe,
             dimension,
             domain: [0.0, 2.0],
@@ -1194,7 +1194,7 @@ pub mod scaled_implementations {
     ///
     /// Scaled to [-1.0, 1.0]
     ///
-    /// Optimum: -39.16599 * n at (-2.903534,...,-2.903534), here on input domain [-5,5]
+    /// Optimum: -39.16616570377142 * n at (-2.903534018185960,...,-2.903534018185960), here on input domain [-5,5]
     pub fn styblinski_tang(x: &[f64]) -> f64 {
         let sum = x
             .iter()
@@ -1342,7 +1342,7 @@ pub mod scaled_implementations {
         let a = input_domain(&x[0], -32.0, 32.0);
         let b = input_domain(&x[1], -32.0, 32.0);
         -200.0 * (-0.2 * (a.powi(2) + b.powi(2)).sqrt()).exp()
-            + 5.0 * ((3.0 * a).cos() + (3.0 * b.sin())).exp()
+            + 5.0 * ((3.0 * a).cos() + ((3.0 * b).sin())).exp()
     }
 
     /// Adjiman function
@@ -1652,7 +1652,7 @@ pub mod scaled_implementations {
     ///
     /// Scaled to [-1.0, 1.0]
     ///
-    /// Optimum: −1.9133 at (−0.547,−1.547), here on input domain [-1.5,4] for x and [-3,3] for y
+    /// Optimum: -1.913222954981037 at (−0.547,−1.547), here on input domain [-1.5,4] for x and [-3,3] for y
     /// Defined only on 2-dimensional space.
     pub fn mccormick(x: &[f64]) -> f64 {
         debug_assert_eq!(x.len(), 2);
